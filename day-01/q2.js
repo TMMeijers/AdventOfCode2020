@@ -1,18 +1,10 @@
-const fs = require('fs')
+const files = require('../utils/files')
+const path = require('path')
 
 const EXPECTED_SUM = 2020
 
-fs.readFile('./input.txt', 'utf8', (err, data) => {
-  if (err) {
-    throw err
-  }
-
-  const expenseList = data.split('\n').reduce((list, expense, i) => {
-    if (expense.trim()) {
-      list.push(Number.parseInt(expense, 10))
-    }
-    return list
-  }, [])
+async function main() {
+  const expenseList = await files.readLines(path.resolve(__dirname + '/input.txt'), (expense) => Number.parseInt(expense, 10))
   expenseList.sort((a, b) => a - b)
 
   for (i = 0; i < expenseList.length - 2; i++) {
@@ -35,4 +27,6 @@ fs.readFile('./input.txt', 'utf8', (err, data) => {
       }
     }
   }
-})
+}
+
+main()
