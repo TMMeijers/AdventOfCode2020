@@ -4,7 +4,7 @@ const path = require('path')
 const EXPECTED_SUM = 2020
 
 async function main() {
-  const expenseList = await files.readLines(path.resolve(__dirname + '/input.txt'), (expense) => Number.parseInt(expense, 10))
+  const expenseList = await files.readLines(path.resolve(__dirname, 'input.txt'), (expense) => Number.parseInt(expense, 10))
   expenseList.sort((a, b) => a - b)
 
   const half = EXPECTED_SUM / 2

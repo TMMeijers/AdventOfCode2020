@@ -14,7 +14,7 @@ async function main() {
     correct += matchPw.test(pw)
   }
 
-  await files.readLines(path.resolve(__dirname + '/input.txt'), counter)
+  await files.readLines(path.resolve(__dirname, 'input.txt'), counter)
 
   console.warn(`Number of correct items: ${correct}`)
 }

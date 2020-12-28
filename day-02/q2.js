@@ -13,7 +13,7 @@ async function main() {
     correct += (pw.charAt(min - 1) === char ^ pw.charAt(max - 1) === char) === 1
   }
 
-  await files.readLines(path.resolve(__dirname + '/input.txt'), counter)
+  await files.readLines(path.resolve(__dirname, 'input.txt'), counter)
 
   console.warn(`Number of correct items: ${correct}`)
 }

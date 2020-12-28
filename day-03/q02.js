@@ -9,7 +9,7 @@ async function main() {
     { right: 7, down: 1 },
     { right: 1, down: 2 },
   ]
-  const rowsOfTrees = await files.readLines(path.resolve(__dirname + '/input.txt'))
+  const rowsOfTrees = await files.readLines(path.resolve(__dirname, 'input.txt'))
   const width = rowsOfTrees[0].length
 
   const treeHits = angles.map(({ right, down }) => {

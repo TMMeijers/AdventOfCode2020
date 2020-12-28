@@ -5,7 +5,7 @@ const STEP_RIGHT = 3
 const STEP_DOWN = 1
 
 async function main() {
-  const rowsOfTrees = await files.readLines(path.resolve(__dirname + '/input.txt'))
+  const rowsOfTrees = await files.readLines(path.resolve(__dirname, 'input.txt'))
   const width = rowsOfTrees[0].length
 
   let x = 0
