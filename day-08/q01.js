@@ -31,8 +31,5 @@ async function main() {
 
   console.warn(`The final accumulator value: ${acc}`)
 }
+
 main()
-
-
-
-// 0 + 7 + 23 + 41 + 1
