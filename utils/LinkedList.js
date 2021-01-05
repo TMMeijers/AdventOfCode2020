@@ -89,7 +89,6 @@ class LinkedList {
   }
 
   sliceFromNode(startNode, end) {
-    console.warn(end)
     const list = new LinkedList()
     let done = false
     let count = 0
