@@ -41,7 +41,7 @@ async function main() {
     }
 
     if (sum === n0) {
-      const range = numbers.slice(i2 + 1, i1).sort()
+      const range = numbers.slice(i2 + 1, i1).sort((a, b) => a - b)
       const n1 = range[0]
       const n2 = range[range.length - 1]
       console.warn(`The sum of ${n1} and ${n2} is ${n1 + n2}`)
